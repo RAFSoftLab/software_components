@@ -1,0 +1,42 @@
+<project name="gameArchive-ant" basedir=".">
+	<property name="src" location="src" />	
+	<property name="bin" location="bin" />
+	<property name="dist" location="dist" />
+	<property name="doc"  location="doc"  />
+	
+	<target name="init" description="Clean directoris">
+		<delete dir="${bin}" />
+		<delete dir="${dist}" />
+	</target>
+	
+	<target name="mkdir" depends="init" description="Make directoris">
+		<mkdir dir="${bin}"/>
+		<mkdir dir="${dist}"/>
+	</target>
+	
+	
+	
+	<target name="compile" depends="mkdir" description="Compile code" >
+		<javac 	srcdir="${src}" destdir="${bin}" includeantruntime="false"/> 
+	</target>
+	
+	<target name="jar" depends="compile" description="Make jar">
+		<jar jarfile="${dist}/GameArchive.jar" basedir="${bin}" />
+	</target>
+	
+	
+	
+	
+	<target name="docPrepare" description="Prepare to documentation generation">
+	<delete dir="${doc}" />
+	<mkdir dir="${doc}" />
+	</target>
+	
+	<target name="doc" depends="docPrepare" description="Generate documentation">
+	<javadoc  sourcepath="${src}" destdir="${doc}" />
+	</target>
+	
+	
+	
+	
+</project>
