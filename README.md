@@ -1,6 +1,8 @@
 # software_components
 Software components course (5. semester): student's projects
 
-Projekti na ovom repozitorijumu su softverske komponente razvijene u okviru predmeta Softevrske komponente na RAF-u
+Projekti na ovom repozitorijumu su projekti razvijeni u okviru predmeta Softverske komponente na RAF-u, školska 2016/2017. godina
+
+
 
 
